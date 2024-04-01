@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-^9)f7*q!pjb2v#!wpn+-qv7lx6p!02jr9z&)b3aj$^#e)ka)&p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -123,7 +123,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-mongo_client = pymongo.MongoClient()
+mongo_client = pymongo.MongoClient('mongodb://mongo:27017/')
 MONGODB = mongo_client['url-db']
 LONG_URL_INDEX = 'long_url_index'
 SHORT_URL_INDEX = 'short_url_index'
